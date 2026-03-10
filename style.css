@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #050505;
+    overflow-x: hidden;
+}
+
+/* Fix the 3D scene to the background */
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+}
+
+/* Text Overlay Styling */
+.scene {
+    height: 100vh; /* Each section takes up one full screen */
+    width: 100vw;
+    position: relative;
+    pointer-events: none; /* Lets you click through empty space to the 3D canvas if needed */
+}
+
+.content {
+    position: absolute;
+    pointer-events: auto;
+}
+
+.left { top: 30%; left: 10%; }
+.right { top: 40%; right: 10%; text-align: right; }
+.center { top: 30%; left: 50%; transform: translateX(-50%); text-align: center; }
+
+h1 { font-size: 4rem; color: #ffffff; }
+h2 { font-size: 2.5rem; margin-bottom: 10px; }
+p { font-size: 1.2rem; line-height: 1.6; color: #cccccc; }
+
+/* Custom Colors */
+.text-cyan h2 { color: #00ffcc; }
+.text-cyan p { color: #b3fff2; }
+.text-pink h2 { color: #ff00cc; }
+.text-pink p { color: #ffb3f0; }
+.text-white h2 { color: #ffffff; }
+
+.project-box {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+              }
